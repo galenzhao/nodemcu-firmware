@@ -15,6 +15,11 @@
 #define U8G2_FONT_TABLE \
   U8G2_FONT_TABLE_ENTRY(font_6x10_tf) \
   U8G2_FONT_TABLE_ENTRY(font_unifont_t_symbols) \
+  U8G2_FONT_TABLE_ENTRY(font_battery19_tn) \
+//  U8G2_FONT_TABLE_ENTRY(font_battery24_tr) \
+  U8G2_FONT_TABLE_ENTRY(font_inb24_mf) \
+//  U8G2_FONT_TABLE_ENTRY(streamline_interface_essential_wifi_t) \
+
 
 #else
 //

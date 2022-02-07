@@ -7,8 +7,8 @@
 // this out and enabling the explicitly size, e.g. FLASH_4M.  Valid sizes are
 // FLASH_512K, FLASH_1M, FLASH_2M, FLASH_4M, FLASH_8M, FLASH_16M.
 
-//#define FLASH_AUTOSIZE
-#define FLASH_4M
+#define FLASH_AUTOSIZE
+// #define FLASH_4M
 
 
 // The firmware now selects a baudrate of 115,200 by default, but the driver
@@ -50,7 +50,7 @@
 // Otherwise all floating point operations use doubles. All integer values
 // can be represented exactly in floating point.
 
-//#define LUA_NUMBER_INTEGRAL
+#define LUA_NUMBER_INTEGRAL
 
 // When using Lua 5.3, two different builds are now supported. 
 // The main difference is in the processing of numeric data types.
@@ -79,7 +79,7 @@
 // LUA_FLASH_STORE defines the default partition size if the NodeMCU partition
 // tool is not used.
 
-//#define LUA_FLASH_STORE                   0x10000
+#define LUA_FLASH_STORE                   0x20000
 
 // By default Lua executes the file init.lua at start up.  The following
 // define allows you to replace this with an alternative startup.  Warning:
@@ -146,8 +146,8 @@
 // firmware to manage timer rescheduling over sleeps (the CPU clock is
 // suspended so timers get out of sync) then enable the following options
 
-//#define TIMER_SUSPEND_ENABLE
-//#define PMSLEEP_ENABLE
+#define TIMER_SUSPEND_ENABLE
+#define PMSLEEP_ENABLE
 
 // The net module optionally offers net info functionnality. Uncomment the following
 // to enable the functionnality.
@@ -161,7 +161,7 @@
 // further details, as the scope of these changes is not obvious.
 
 //  Enable the wifi.startsmart() and wifi.stopsmart()
-//#define WIFI_SMART_ENABLE
+#define WIFI_SMART_ENABLE
 
 //  Enable wifi.sta.config() event callbacks
 #define WIFI_SDK_EVENT_MONITOR_ENABLE
@@ -182,14 +182,14 @@
 // invalid, then it will not be used, and a message will be printed
 // during boot.
 
-//#define WIFI_STA_HOSTNAME "NodeMCU"
-//#define WIFI_STA_HOSTNAME_APPEND_MAC
+#define WIFI_STA_HOSTNAME "BBQube"
+#define WIFI_STA_HOSTNAME_APPEND_MAC
 
 
 // If you use the enduser_setup module, then you can also set the default
 // SSID when this module is running in AP mode.
 
-#define ENDUSER_SETUP_AP_SSID "NodeMCU"
+#define ENDUSER_SETUP_AP_SSID "BBQube"
 
 
 // I2C software driver partially supports use of GPIO16 (D0) pin for SCL line.
@@ -230,7 +230,7 @@
 // directory basis. If you do this then you can also set the corresponding
 // compile options (-O0 -ggdb) on a per directory as well.
 
-//#define DEVELOPMENT_TOOLS
+#define DEVELOPMENT_TOOLS
 //#define DEVELOPMENT_USE_GDB
 //#define DEVELOPMENT_BREAK_ON_STARTUP_PIN 1
 //#define DEVELOP_VERSION
@@ -255,7 +255,7 @@
 #endif
 
 #ifndef SPIFFS_FIXED_LOCATION
-  #define SPIFFS_FIXED_LOCATION           0x0
+  #define SPIFFS_FIXED_LOCATION           0x100000
   // You'll rarely need to customize this, because nowadays
   // it's usually overruled by the partition table anyway.
 #endif
@@ -267,7 +267,7 @@
 // The following define enables recording of the number of CPU cycles at certain
 // points in the startup process. It can be used to see where the time is being
 // consumed. It enables a nice node.startupcounts() function to get the results.
-//#define PLATFORM_STARTUP_COUNT
+#define PLATFORM_STARTUP_COUNT
 
 #define LUA_TASK_PRIO             USER_TASK_PRIO_0
 #define LUA_PROCESS_LINE_SIG      2
